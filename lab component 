@@ -1,0 +1,48 @@
+menu = {'pizza':50, 'salad':30, 'burger':100,'pop corn':150,'chicken puff':100,'cappuccino':120,'cold coffee':140,'masala tea':50,'french fries':100,'milkshake':150,'veg momos':150}
+
+print('welcome to our coders cafe * ❤️ *')
+print("---------------***-----------------")
+print("---------------***-----------------")
+print('pizza:50\nsalad:30\nburger:100\npop corn:150\nchicken puff:100,\ncappuccino:120\ncold coffee:140\nmasala tea:50\nfrench fries:100\nmilkshake:150\nveg momos:150')
+
+order_item = input('Enter your item:')
+
+order_total= 0
+
+if order_item in menu:
+    order_total+= menu[order_item]
+    order=input('do you want anything else(yes/no):')
+    if order== 'yes':
+        order_item2= input('enter your second item:')
+        if order_item2 in menu:
+            order_total +=menu[order_item2]
+            print(f'your order value:{order_total}')
+    else:
+        print(f'you order value: {order_total}')
+else:
+
+    print("your order value:",order_total)
+    print('you entered a wrong item')
+    print("\nselect payment maetho:")
+    print("-----------------------------")
+    print("1. cash")
+    print("2. upi")
+    print("3. card")
+
+payment=input("Enter you choice (1/2/3) \n1.cash\n2.upi\n3.card:")
+
+
+if payment == "1":
+    print("payment method: CASH")
+elif payment == "2":
+    print("payment method: UPI")
+elif payment == "3":
+    print("enter method: Card")
+else:
+    print("invalid payment method")
+
+print("--------------------------------------")
+print("thankyou for visiting our coders cafe 🫶 !")
+
+print("please visit again  ☺️ !")
+print("-----------*************--------------") 
